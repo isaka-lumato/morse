@@ -3,7 +3,7 @@ arr2 = []
 arr = []
 sep_arr = m_word.split('  ')
 for letter in sep_arr
-  letter2 = letter + ' _'
+  letter2 = '#{letter} +  _'
   arr2.push(letter2)
 end
 
@@ -26,9 +26,9 @@ for final in arr2
     when '--.'
       arr.push('G')
     when '....'
-    arr.push('H')
+      arr.push('H')
     when '..'
-    arr.push('I')
+      arr.push('I')
     when '.---'
       arr.push('J')
     when '-.-'
