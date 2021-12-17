@@ -56,21 +56,7 @@ for final in arr2
     when "-"
       arr.push("T")
     when "..-"
-      arr.push("U")
-    when "...-"
-      arr.push("V")
-    when ".--"
-      arr.push("W")
-    when "-..-"
-      arr.push("X")
-    when "-.--"
-      arr.push("Y")
-    when "--.."
-      arr.push("Z")
-    when "_", "/"
-      arr.push(" ")
-    else
-      arr.push("5")
+
     end
     arrJoined = arr.join("")
   end
