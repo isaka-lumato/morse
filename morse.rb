@@ -72,7 +72,7 @@ for final in arr2
     else
       arr.push('5')
     end
-    arrJoined = arr.join(')
+    arrJoined = arr.join('')
   end
 end
 puts arrJoined
