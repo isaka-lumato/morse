@@ -25,16 +25,7 @@ for final in arr2
       arr.push("F")
     when "--."
       arr.push("G")
-    when "...."
-      arr.push("H")
-    when ".."
-      arr.push("I")
-    when ".---"
-      arr.push("J")
-    when "-.-"
-      arr.push("K")
-    when ".-.."
-      arr.push("L")
+   
     when "--"
       arr.push("M")
     when "-."
