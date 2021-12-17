@@ -2,14 +2,15 @@ m_word = ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. 
 arr2 = []
 arr = []
 sep_arr = m_word.split('  ')
-for letter in sep_arr
-  letter2 = "#{letter} +  _"
+sep_arr.each do |letter|
+  letter2 = '#{letter} +  _'
   arr2.push(letter2)
 end
+# arr_joined = ''
 
-for final in arr2
+arr2.each do |final|
   final_split = final.split
-  for element in final_split
+  final_split.each do |element|
     case element
     when '.-'
       arr.push('A')
