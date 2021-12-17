@@ -26,9 +26,9 @@ for final in arr2
     when '--.'
       arr.push('G')
     when '....'
-      arr.push('H')
+    arr.push('H')
     when '..'
-      arr.push('I')
+    arr.push('I')
     when '.---'
       arr.push('J')
     when '-.-'
