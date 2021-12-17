@@ -1,75 +1,44 @@
-m_word = ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...'
-arr2 = []
-arr = []
-sep_arr = m_word.split('  ')
-sep_arr.each do |letter|
-  letter2 = '#{letter} +  _'
-  arr2.push(letter2)
-end
-# arr_joined = ''
+@international_morse_code = {
+  '.-' => 'A',
+  '-...' => 'B',
+  '-.-.' => 'C',
+  '-..' => 'D',
+  '.' => 'E',
+  '..-.' => 'F',
+  '--.' => 'G',
+  '....' => 'H',
+  '..' => 'I',
+  '.---' => 'J',
+  '-.-' => 'K',
+  '.-..' => 'L',
+  '--' => 'M',
+  '-.' => 'N',
+  '---' => 'O',
+  '.--.' => 'P',
+  '--.-' => 'Q',
+  '.-.' => 'R',
+  '...' => 'S',
+  '-' => 'T',
+  '..-' => 'U',
+  '...-' => 'V',
+  '.--' => 'W',
+  '-..-' => 'X',
+  '-.--' => 'Y',
+  '--..' => 'Z'
+}
 
-arr2.each do |final|
-  final_split = final.split
-  final_split.each do |element|
-    case element
-    when '.-'
-      arr.push('A')
-    when '-...'
-      arr.push('B')
-    when '-.-.'
-      arr.push('C')
-    when '-..'
-      arr.push('D')
-    when '.'
-      arr.push('E')
-    when '..-.'
-      arr.push('F')
-    when '--.'
-      arr.push('G')
-    when '....'
-      arr.push('H')
-    when '..'
-      arr.push('I')
-    when '.---'
-      arr.push('J')
-    when '-.-'
-      arr.push('K')
-    when '.-..'
-      arr.push('L')
-    when '--'
-      arr.push('M')
-    when '-.'
-      arr.push('N')
-    when '---'
-      arr.push('O')
-    when '.--.'
-      arr.push('P')
-    when '--.-'
-      arr.push('Q')
-    when '.-.'
-      arr.push('R')
-    when '...'
-      arr.push('S')
-    when '-'
-      arr.push('T')
-    when '..-'
-      arr.push('U')
-    when '...-'
-      arr.push('V')
-    when '.--'
-      arr.push('W')
-    when '-..-'
-      arr.push('X')
-    when '-.--'
-      arr.push('Y')
-    when '--..'
-      arr.push('Z')
-    when '_', '/'
-      arr.push(' ')
-    else
-      arr.push('5')
-    end
-    arr_joined = arr.join
-  end
+def decode_char(letter_code)
+  @international_morse_code[letter_code]
 end
-puts arr_joined
+
+def decode_word(word_code)
+  letters = word_code.split.map { |letter_code| decode_char(letter_code) }
+  letters.join
+end
+
+def decode(morse_code)
+  words = morse_code.split('   ').map { |word_code| decode_word(word_code) }
+  words.join(' ')
+end
+
+puts(decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'))
