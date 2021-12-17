@@ -1,15 +1,15 @@
 m_word = ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...'
-arr_2 = []
+arr2 = []
 arr = []
 sep_arr = m_word.split('  ')
 for letter in sep_arr
-  letter_2 = '#{letter} +  _'
-  arr_2.push(letter_2)
+  letter2 = "#{letter} +  _"
+  arr2.push(letter2)
 end
 
-for final in arr_2
-  finalSplit = final.split()
-  for element in finalSplit
+for final in arr2
+  final_split = final.split
+  for element in final_split
     case element
     when '.-'
       arr.push('A')
@@ -68,7 +68,7 @@ for final in arr_2
     else
       arr.push('5')
     end
-    arr_joined = arr.join('')
+    arr_joined = arr.join
   end
 end
 puts arr_joined
